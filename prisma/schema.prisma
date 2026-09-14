@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String         @id @default(cuid())
+  username      String?        @unique
+  email         String?        @unique
+  name          String?
+  passwordHash  String?        // For admin credentials login
+  image         String?
+  role          String         @default("guest") // "guest" | "admin"
+  sessions      Session[]
+  chats         ChatSession[]
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+}
+
+model ChatSession {
+  id          String        @id @default(cuid())
+  userId      String
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title       String?
+  escalated   Boolean       @default(false)
+  messages    ChatMessage[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model ChatMessage {
+  id          String       @id @default(cuid())
+  sessionId   String
+  session     ChatSession  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  role        String       // "user" | "assistant" | "system"
+  content     String
+  feedback    Feedback?
+  correction  Correction?
+  createdAt   DateTime     @default(now())
+}
+
+model Feedback {
+  id          String       @id @default(cuid())
+  messageId   String       @unique
+  message     ChatMessage  @relation(fields: [messageId], references: [id], onDelete: Cascade)
+  rating      Int          // 1 = Thumbs Up, -1 = Thumbs Down
+  reason      String?      // e.g., "inaccurate", "unhelpful", "tone", "other"
+  userComment String?
+  resolved    Boolean      @default(false)
+  createdAt   DateTime     @default(now())
+}
+
+model Correction {
+  id             String       @id @default(cuid())
+  messageId      String?      @unique
+  message        ChatMessage? @relation(fields: [messageId], references: [id], onDelete: SetNull)
+  originalPrompt String
+  badResponse    String
+  idealResponse  String
+  applied        Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+}
+
+model SystemConfig {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}
