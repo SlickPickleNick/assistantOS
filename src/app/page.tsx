@@ -1,20 +1,26 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import HotelHero from '@/components/HotelHero';
-import HotelSuites from '@/components/HotelSuites';
-import HotelDining from '@/components/HotelDining';
-import HotelAmenities from '@/components/HotelAmenities';
-import HotelFooter from '@/components/HotelFooter';
-import ChatWidget from '@/components/ChatWidget';
+import GatorHeader from '@/components/GatorHeader';
+import GatorHero from '@/components/GatorHero';
+import GatorReservation from '@/components/GatorReservation';
+import GatorBulletins from '@/components/GatorBulletins';
+import GatorPropertyOverview from '@/components/GatorPropertyOverview';
+import GatorAccommodations from '@/components/GatorAccommodations';
+import GatorDining from '@/components/GatorDining';
+import GatorAmenities from '@/components/GatorAmenities';
+import GatorSpa from '@/components/GatorSpa';
+import GatorActivities from '@/components/GatorActivities';
+import GatorMapViewer from '@/components/GatorMapViewer';
+import GatorLoyalty from '@/components/GatorLoyalty';
+import GatorAttractions from '@/components/GatorAttractions';
+import GatorFooter from '@/components/GatorFooter';
 import GatekeeperModal from '@/components/GatekeeperModal';
 
 export default function HomePage() {
   const [user, setUser] = useState<any>(null);
   const [isAuthOpen, setIsAuthOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  const [loadingSession, setLoadingSession] = useState(true);
+  const [isMapModalOpen, setIsMapModalOpen] = useState(false);
 
   // Check current session on mount
   useEffect(() => {
@@ -24,15 +30,9 @@ export default function HomePage() {
         const data = await res.json();
         if (data.user) {
           setUser(data.user);
-        } else {
-          // Site-wide gatekeeper: If unauthenticated, prompt gatekeeper modal
-          setIsAuthOpen(true);
         }
       } catch (err) {
         console.error('Session check failed', err);
-        setIsAuthOpen(true);
-      } finally {
-        setLoadingSession(false);
       }
     }
     checkSession();
@@ -42,84 +42,97 @@ export default function HomePage() {
     try {
       await fetch('/api/auth/logout', { method: 'POST' });
       setUser(null);
-      setIsChatOpen(false);
-      setIsAuthOpen(true);
     } catch (err) {
       console.error('Logout error:', err);
     }
   }
 
-  function handleConciergePrompt(promptText: string) {
-    if (!user) {
-      setIsAuthOpen(true);
-      return;
+  function scrollToReservation() {
+    const el = document.getElementById('reservation');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsChatOpen(true);
+  }
+
+  function scrollToAccommodations() {
+    const el = document.getElementById('accommodations');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#070a12] text-slate-100 selection:bg-amber-400 selection:text-slate-950">
-      {/* Navigation */}
-      <Navbar
+    <div className="min-h-screen flex flex-col bg-white text-[#1c1c1c] selection:bg-[#916e27] selection:text-white">
+      {/* Official Go Gator Header */}
+      <GatorHeader
         user={user}
         onOpenAuth={() => setIsAuthOpen(true)}
-        onOpenChat={() => {
-          if (!user) {
-            setIsAuthOpen(true);
-          } else {
-            setIsChatOpen(true);
-          }
-        }}
         onLogout={handleLogout}
+        onReserveClick={scrollToReservation}
+        onOpenMap={() => setIsMapModalOpen(true)}
       />
 
-      {/* Main Hotel Showcase Body */}
+      {/* Main Luxury Resort Body */}
       <main className="flex-1">
-        <HotelHero
-          user={user}
-          onOpenChat={() => {
-            if (!user) {
-              setIsAuthOpen(true);
-            } else {
-              setIsChatOpen(true);
-            }
-          }}
-          onOpenAuth={() => setIsAuthOpen(true)}
+        {/* Hero Section */}
+        <GatorHero
+          onExploreClick={scrollToAccommodations}
+          onOpenMap={() => setIsMapModalOpen(true)}
         />
-        <HotelSuites onAskConcierge={handleConciergePrompt} />
-        <HotelDining onAskConcierge={handleConciergePrompt} />
-        <HotelAmenities onAskConcierge={handleConciergePrompt} />
+
+        {/* Floating Reservation Search Bar */}
+        <GatorReservation
+          onSearch={(criteria) => {
+            console.log('Reservation Search:', criteria);
+            alert(`Checking rates at Go Gator Resort & Spa for ${criteria.dates}`);
+          }}
+        />
+
+        {/* Live Daily Resort Bulletins (Section 17) */}
+        <GatorBulletins />
+
+        {/* Single Property Dedicated Overview Card (Section 1 & 3) */}
+        <GatorPropertyOverview onOpenMap={() => setIsMapModalOpen(true)} />
+
+        {/* All 7 Room & Villa Categories (Section 2) */}
+        <GatorAccommodations />
+
+        {/* 5 Dining Venues + 3 Bars & All-Inclusive Rules (Section 4) */}
+        <GatorDining />
+
+        {/* Pools, Beach, Cabanas & Transportation (Section 3 & 7) */}
+        <GatorAmenities />
+
+        {/* Spa & Wellness (Section 5) */}
+        <GatorSpa />
+
+        {/* Kids Club, Teen Lounge, Watersports & Entertainment (Section 6) */}
+        <GatorActivities />
+
+        {/* Interactive Property Map & Floor Plan Lightbox (Page 2) */}
+        <GatorMapViewer
+          isOpen={isMapModalOpen}
+          onClose={() => setIsMapModalOpen(false)}
+        />
+
+        {/* Gator Rewards Loyalty Program Tiers (Section 9) */}
+        <GatorLoyalty />
+
+        {/* Gainesville Local Area Guide (Section 16) */}
+        <GatorAttractions />
       </main>
 
-      {/* Footer */}
-      <HotelFooter />
+      {/* Official Directory & Policies Footer (Section 8 & 15) */}
+      <GatorFooter />
 
-      {/* Floating 24/7 AI Concierge Chat Support Bubble */}
-      <ChatWidget
-        user={user}
-        isOpen={isChatOpen}
-        onToggle={() => {
-          if (!user) {
-            setIsAuthOpen(true);
-          } else {
-            setIsChatOpen(!isChatOpen);
-          }
-        }}
-        onOpenAuth={() => setIsAuthOpen(true)}
-      />
-
-      {/* Site-Wide Authentication Gatekeeper Modal */}
+      {/* Authentication Gatekeeper Modal */}
       <GatekeeperModal
         isOpen={isAuthOpen}
-        onClose={() => {
-          // If user is not logged in, gatekeeper stays open or can be dismissed if allowed
-          if (user) setIsAuthOpen(false);
-        }}
+        onClose={() => setIsAuthOpen(false)}
         onSuccess={(authenticatedUser) => {
           setUser(authenticatedUser);
           setIsAuthOpen(false);
         }}
-        forceRequired={!user && !loadingSession}
       />
     </div>
   );

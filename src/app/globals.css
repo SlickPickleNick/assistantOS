@@ -1,127 +1,82 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #070a12;
-  --bg-secondary: #0d1322;
-  --bg-card: rgba(16, 24, 43, 0.85);
-  --bg-glass: rgba(16, 24, 43, 0.65);
+  /* Go Gator Resort & Spa Luxury Brand Design Tokens */
+  --rz-white: #ffffff;
+  --rz-offwhite: #f8f8f8;
+  --rz-card-bg: #f4f4f4;
+  --rz-charcoal: #1c1c1c;
+  --rz-gray-dark: #2d2d2d;
+  --rz-gray-medium: #646464;
+  --rz-gray-light: #e0e3ec;
+  --rz-border: #e2e2e2;
+  --rz-gold: #916e27;
+  --rz-gold-hover: #72561e;
+  --rz-gold-light: #c5a869;
+  --rz-blue: #002244;
+  --rz-navy-deep: #0a192f;
   
-  --gold-primary: #d4af37;
-  --gold-light: #f3e5ab;
-  --gold-hover: #e5c05b;
-  --gold-glow: rgba(212, 175, 55, 0.25);
-
-  --azure-glow: rgba(14, 165, 233, 0.25);
-  --azure-primary: #0ea5e9;
-
-  --border-gold: rgba(212, 175, 55, 0.22);
-  --border-glass: rgba(255, 255, 255, 0.08);
-
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-  --text-gold: #e5c05b;
+  --font-serif: "Playfair Display", "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--rz-white);
+  color: var(--rz-charcoal);
+  font-family: var(--font-sans);
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar */
+/* Serif Editorial Headers */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+/* Luxury Navigation Overline */
+.t-overline-medium {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+/* Custom Thin Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(11, 15, 25, 0.5);
+  background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.3);
-  border-radius: 9999px;
+  background: #c5a869;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(212, 175, 55, 0.6);
+  background: #916e27;
 }
 
-/* Luxury Glassmorphism */
-.glass-panel {
-  background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-gold);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
-}
-
-.glass-subtle {
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-glass);
-}
-
-.glass-nav {
-  background: rgba(7, 10, 18, 0.85);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-gold);
-}
-
-/* Luxury Gold Button */
+/* Luxury button transitions */
 .btn-gold {
-  background: linear-gradient(135deg, #d4af37 0%, #b89727 100%);
-  color: #070a12;
-  font-weight: 600;
-  letter-spacing: 0.05em;
+  background-color: var(--rz-charcoal);
+  color: var(--rz-white);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px var(--gold-glow);
 }
 .btn-gold:hover {
-  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  background-color: var(--rz-gray-medium);
 }
 
 .btn-outline-gold {
-  background: transparent;
-  border: 1px solid var(--gold-primary);
-  color: var(--gold-light);
+  border: 1px solid var(--rz-charcoal);
+  color: var(--rz-charcoal);
   transition: all 0.3s ease;
 }
 .btn-outline-gold:hover {
-  background: rgba(212, 175, 55, 0.12);
-  border-color: var(--gold-light);
-  transform: translateY(-2px);
-}
-
-/* Floating Concierge Bubble Glow */
-@keyframes pulse-gold {
-  0%, 100% {
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4), 0 0 35px rgba(14, 165, 233, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.7), 0 0 45px rgba(14, 165, 233, 0.4);
-  }
-}
-
-.concierge-bubble-glow {
-  animation: pulse-gold 3.5s infinite ease-in-out;
-}
-
-/* Subtle Shimmer */
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
-.gold-gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #f3e5ab 50%, #d4af37 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-color: var(--rz-charcoal);
+  color: var(--rz-white);
 }

@@ -1,0 +1,659 @@
+{
+  "property": {
+    "name": "Go Gator Resort & Spa",
+    "fictionalDisclaimer": "Fictional property for chatbot training purposes. All names, rates, and policies are illustrative",
+    "taglines": [
+      "Gateway to Relaxation",
+      "Where Every Stay Feels Like Paradise"
+    ],
+    "classification": "4.5-star all-inclusive resort",
+    "starRating": 4.5,
+    "address": {
+      "street": "4200 Ocean Vista Drive",
+      "city": "Gainesville",
+      "state": "FL",
+      "postalCode": "32606",
+      "locationDescription": "Northwest Gainesville, 15 minutes from Gainesville International Airport"
+    },
+    "contact": {
+      "phone": "+1 (555) 200-1234",
+      "email": "guestservices@gogator.example",
+      "loyaltyEmail": "loyalty@gogator.example",
+      "website": "www.gogator.example",
+      "frontDeskExtension": "0",
+      "frontDeskAvailability": "24/7"
+    },
+    "inventory": {
+      "totalRooms": 306,
+      "suites": 24,
+      "villas": 6
+    },
+    "timing": {
+      "checkIn": "4:00 PM",
+      "checkOut": "11:00 AM",
+      "earlyCheckInGuaranteed": "10:00 AM ($50)",
+      "lateCheckOutGuaranteed": "2:00 PM ($50 or loyalty benefit)"
+    },
+    "highlights": [
+      "800 ft of private beachfront",
+      "3 outdoor pools (1 adults-only, 1 family, 1 lazy river)",
+      "5 dining venues + 3 bars",
+      "Full-service spa (12 treatment rooms)",
+      "18-hole golf course (off-site partner, shuttle provided)",
+      "15,000 sq ft conference & event space",
+      "Kids Club (ages 4–12) and Teen Lounge (ages 13–17)"
+    ]
+  },
+  "financials": {
+    "currency": "USD",
+    "occupancyTaxRate": 0.12,
+    "resortFeePerNight": 35.0,
+    "resortFeeCovers": [
+      "Wi-Fi",
+      "Beach chairs and umbrellas",
+      "Fitness center access",
+      "Kids Club day sessions",
+      "Shuttle to partner 18-hole golf course"
+    ],
+    "incidentalHoldPerNight": 150.0,
+    "extraPersonCharges": {
+      "adult": 45.0,
+      "childAges3To12": 25.0,
+      "under3": 0.0
+    },
+    "seasonality": {
+      "highSeason": "August 1st to May 30th",
+      "lowSeason": "June 1st to July 31st"
+    }
+  },
+  "rooms": [
+    {
+      "id": "garden-view",
+      "name": "Garden View Room",
+      "roomNumbers": "101–120",
+      "sqFt": 350,
+      "maxOccupancy": "2 adults + 1 child",
+      "maxAdults": 2,
+      "maxChildren": 1,
+      "bedConfig": "1 King or 2 Queens",
+      "rates": {
+        "lowSeason": 189,
+        "highSeason": 259
+      },
+      "petFriendly": true,
+      "description": "Surrounded by lush tropical gardens, featuring private patio or balcony and artisanal amenities. Only room category offering pet-friendly accommodations.",
+      "features": ["Garden Patio", "Pet-Friendly (Limited)", "Walk-in Rain Shower", "Luxury Linens"]
+    },
+    {
+      "id": "resort-view",
+      "name": "Resort View Room",
+      "roomNumbers": "121–140",
+      "sqFt": 375,
+      "maxOccupancy": "2 adults + 2 children",
+      "maxAdults": 2,
+      "maxChildren": 2,
+      "bedConfig": "1 King or 2 Queens",
+      "rates": {
+        "lowSeason": 229,
+        "highSeason": 299
+      },
+      "petFriendly": false,
+      "description": "Scenic views overlooking resort interior lagoons, designer swimming pools, and illuminated courtyard fountains.",
+      "features": ["Lagoon Courtyard View", "Private Balcony", "Double Marble Vanity", "Smart In-Room Tablet"]
+    },
+    {
+      "id": "ocean-view",
+      "name": "Ocean View Room",
+      "roomNumbers": "141–160",
+      "sqFt": 400,
+      "maxOccupancy": "2 adults + 2 children",
+      "maxAdults": 2,
+      "maxChildren": 2,
+      "bedConfig": "1 King or 2 Queens",
+      "rates": {
+        "lowSeason": 289,
+        "highSeason": 379
+      },
+      "petFriendly": false,
+      "description": "Elevated coastal vistas across the palm tree canopy toward the Atlantic/Gulf coast with spacious private terraces.",
+      "features": ["Elevated Coastal Vistas", "Sunset View Balcony", "Soaking Tub", "Espresso Bar"]
+    },
+    {
+      "id": "ocean-front",
+      "name": "Ocean Front Room",
+      "roomNumbers": "201–220",
+      "sqFt": 425,
+      "maxOccupancy": "2 adults + 2 children",
+      "maxAdults": 2,
+      "maxChildren": 2,
+      "bedConfig": "1 King",
+      "rates": {
+        "lowSeason": 349,
+        "highSeason": 449
+      },
+      "petFriendly": false,
+      "description": "Prime beachfront location offering unobstructed horizon-to-horizon ocean views and direct proximity to the beach boardwalk.",
+      "features": ["Direct Oceanfront Panorama", "Steps to Beach", "Plush King Bed", "Binoculars & Sun Deck"]
+    },
+    {
+      "id": "junior-suite",
+      "name": "Junior Suite",
+      "roomNumbers": "221–240",
+      "sqFt": 550,
+      "maxOccupancy": "4 adults",
+      "maxAdults": 4,
+      "maxChildren": 2,
+      "bedConfig": "1 King + Sofa Bed",
+      "rates": {
+        "lowSeason": 429,
+        "highSeason": 549
+      },
+      "petFriendly": false,
+      "description": "Expansive open-concept living area with pull-out luxury sofa bed, dual marble vanities, and soaking tub.",
+      "features": ["Open Living Parlor", "Sofa Bed for 4 Adults", "Deep Soaking Tub", "Walk-in Wardrobe"]
+    },
+    {
+      "id": "executive-suite",
+      "name": "Executive Suite",
+      "roomNumbers": "241–260",
+      "sqFt": 750,
+      "maxOccupancy": "4 adults",
+      "maxAdults": 4,
+      "maxChildren": 2,
+      "bedConfig": "1 King + Living Area",
+      "rates": {
+        "lowSeason": 599,
+        "highSeason": 749
+      },
+      "petFriendly": false,
+      "description": "Distinguished suite featuring an independent private bedroom, dedicated executive living salon, dining area, and wet bar.",
+      "features": ["Separate Living Salon", "Dining Table & Wet Bar", "Executive Work Station", "VIP Butler Service Eligible"]
+    },
+    {
+      "id": "two-bedroom-villa",
+      "name": "Two-Bedroom Villa",
+      "roomNumbers": "261–280 (Villas 301–306)",
+      "sqFt": 1400,
+      "maxOccupancy": "6 adults",
+      "maxAdults": 6,
+      "maxChildren": 4,
+      "bedConfig": "2 King + Kitchenette",
+      "rates": {
+        "lowSeason": 899,
+        "highSeason": 1199
+      },
+      "petFriendly": false,
+      "description": "Our most prestigious residence with two private master suites, equipped kitchenette, private lanai terrace, and secluded estate grounds.",
+      "features": ["Two Master King Suites", "Equipped Kitchenette", "Private Lanai Enclave", "Complimentary Valet & Butler"]
+    }
+  ],
+  "diningVenues": [
+    {
+      "id": "go-gator-buffet",
+      "name": "Go Gator Buffet",
+      "type": "International buffet",
+      "hours": "6:30–11 AM (Breakfast), 12–3 PM (Lunch), 6–10 PM (Dinner)",
+      "dressCode": "Smart casual",
+      "reservations": "Not required",
+      "allInclusive": "Included (unlimited)",
+      "description": "Vibrant culinary stations showcasing global flavors, carved prime roasts, artisanal pastries, and made-to-order omelets."
+    },
+    {
+      "id": "the-waterfront",
+      "name": "The Waterfront",
+      "type": "Seafood, à la carte",
+      "hours": "5:30–10 PM",
+      "dressCode": "Casual",
+      "reservations": "Recommended",
+      "allInclusive": "One specialty dinner reservation per stay per adult included ($45/adult, $20/child for additional dinners)",
+      "description": "Refined oceanfront dining offering wild-caught coastal seafood, raw bar delicacies, and panoramic sunset views.",
+      "activeBulletin": "Closing early at 8:00 PM tonight for a private event."
+    },
+    {
+      "id": "the-gator-grill",
+      "name": "The Gator Grill",
+      "type": "Steakhouse",
+      "hours": "5:30–10 PM",
+      "dressCode": "Smart casual",
+      "reservations": "Recommended",
+      "allInclusive": "Included",
+      "description": "Signature chops, dry-aged steaks, and grilled local favorites served in an intimate upscale Florida lodge setting."
+    },
+    {
+      "id": "tiki-bar",
+      "name": "Tiki Bar",
+      "type": "Asian drinks & exotic cocktails",
+      "hours": "5:30–10 PM",
+      "dressCode": "Smart casual",
+      "reservations": "Recommended",
+      "allInclusive": "House brands included",
+      "description": "Polynesian Tiki craftsmanship, artisanal Asian cocktails, sake pairings, and light bites amidst torchlit gardens."
+    },
+    {
+      "id": "lagoon-lounge",
+      "name": "Lagoon Lounge",
+      "type": "Cocktails & light bites",
+      "hours": "11 AM–1 AM",
+      "dressCode": "Casual",
+      "reservations": "Not required",
+      "allInclusive": "House brands included",
+      "description": "Sophisticated indoor/outdoor cocktail salon with craft mixology, live evening music, and savory tapas."
+    },
+    {
+      "id": "swamp-view",
+      "name": "Swamp View",
+      "type": "Poolside drinks & refreshments",
+      "hours": "10 AM–6 PM",
+      "dressCode": "Swimwear OK",
+      "reservations": "Required",
+      "allInclusive": "House brands included",
+      "description": "Refreshing poolside bar serving frozen daiquiris, craft beers, and cold coconut waters directly to your sun lounger."
+    }
+  ],
+  "allInclusiveDetails": {
+    "included": [
+      "Go Gator Buffet (all meals)",
+      "The Gator Grill (dinner)",
+      "All resort bars (house brands)",
+      "One specialty dinner reservation per stay per adult at The Waterfront"
+    ],
+    "specialtySurcharges": {
+      "additionalWaterfrontDinnerAdult": 45.0,
+      "additionalWaterfrontDinnerChild": 20.0
+    },
+    "dietaryAccommodations": "Gluten-free, vegan, kosher-style, and allergy-conscious menus available at all venues. Kosher and halal requests require 24-hour advance notice."
+  },
+  "amenities": {
+    "pools": [
+      {
+        "name": "Family Pool",
+        "hours": "7 AM–10 PM",
+        "access": "All ages",
+        "description": "Large interactive pool with zero-depth entry and family splash zones.",
+        "activeBulletin": "Closing early at 6:00 PM today for a private event."
+      },
+      {
+        "name": "Serenity Adults-Only Pool",
+        "hours": "8 AM–7 PM",
+        "access": "Strictly 18+",
+        "description": "Peaceful adults-only sanctuary with daybeds, chilled towels, and tranquil ambience."
+      },
+      {
+        "name": "Lazy River",
+        "hours": "9 AM–6 PM",
+        "access": "All ages",
+        "description": "Continuous gentle flow current tubing course looping through resort grounds."
+      }
+    ],
+    "beach": {
+      "frontage": "800 ft private beachfront",
+      "loungers": "Complimentary for all registered guests",
+      "cabanaRental": {
+        "pricePerDay": 75.0,
+        "bookingChannel": "Reservable via app or concierge",
+        "loyaltyPerk": "Complimentary on weekdays for Platinum Gators members"
+      }
+    },
+    "fitnessCenter": {
+      "access": "24/7 access with room key",
+      "personalTraining": "$60/hr (book via spa desk)"
+    },
+    "wifi": {
+      "standard": "Complimentary standard Wi-Fi resort-wide",
+      "premium": "$12.95/day for high-speed streaming"
+    },
+    "parking": {
+      "selfParking": "$25/day",
+      "valet": "$40/day",
+      "evCharging": "4 charging stations total (first-come, first-served)"
+    },
+    "businessCenter": {
+      "location": "Off main lobby",
+      "hours": "6 AM–11 PM",
+      "printing": "$0.25/page"
+    },
+    "laundry": {
+      "valet": "Same-day valet laundry (drop off by 9 AM)",
+      "selfService": "Self-service laundromat on Level 2"
+    }
+  },
+  "spa": {
+    "hours": "8 AM–8 PM daily",
+    "activeBulletin": "On Sunday, spa opens at 10 AM due to scheduled maintenance.",
+    "roomsCount": 12,
+    "thermalSuite": "Sauna, steam, whirlpool included with any treatment or day pass ($45)",
+    "signatureTreatments": [
+      {
+        "name": "Ocean Mineral Massage",
+        "duration": "50 min",
+        "price": 175,
+        "description": "Mineral-rich therapeutic stone massage relieving muscle tension."
+      },
+      {
+        "name": "Coastal Glow Facial",
+        "duration": "60 min",
+        "price": 195,
+        "description": "Deeply moisturizing marine antioxidant facial rejuvenating coastal skin."
+      },
+      {
+        "name": "Couples Retreat Package",
+        "duration": "90 min",
+        "price": 420,
+        "description": "Side-by-side aromatherapy massages with champagne and private thermal suite time."
+      }
+    ],
+    "bookingRecommendation": "Recommend booking 48+ hours in advance for weekend slots",
+    "cancellationPolicy": "24-hour notice required or a 50% charge applies"
+  },
+  "activities": {
+    "kidsClub": {
+      "ages": "4–12",
+      "dayCamp": "9 AM–5 PM daily, $0 for all-inclusive guests (includes lunch & activities)",
+      "eveningSession": "6–10 PM, $25/child (advance sign-up required)"
+    },
+    "teenLounge": {
+      "ages": "13–17",
+      "features": "Game room, movie nights, beach volleyball tournaments, self check-in with wristband"
+    },
+    "watersports": {
+      "complimentary": ["Kayaks", "Paddleboards", "Snorkel gear"],
+      "rentals": [
+        {
+          "name": "Jet Ski Rental",
+          "rate": "$90 / 30 min",
+          "provider": "3rd-party vendor (waiver required)"
+        }
+      ]
+    },
+    "eveningEntertainment": [
+      "Live music nightly at Lobby Lounge",
+      "Weekly rotating theme nights (Luau, Casino Night) posted at Concierge and TV Channel 4"
+    ],
+    "excursions": [
+      "Golf shuttle (3x daily)",
+      "Snorkeling boat tours",
+      "City day trips"
+    ]
+  },
+  "transportation": {
+    "airportShuttle": {
+      "rate": "Complimentary scheduled shuttle",
+      "frequency": "Every 2 hours, 6 AM–10 PM",
+      "normalReservationLeadTime": "4 hours ahead via front desk",
+      "activeBulletin": "Due to temporary staffing limitations, airport shuttle currently requires 24-hour advance booking."
+    },
+    "onDemandTransfer": {
+      "service": "Private luxury car",
+      "rate": "$65 one-way",
+      "bookingChannel": "Concierge"
+    },
+    "rentalCars": {
+      "location": "Lobby desk",
+      "hours": "7 AM–7 PM"
+    },
+    "golfCourseShuttle": {
+      "rate": "Included in resort fee",
+      "hours": "Runs hourly 6:30 AM–6 PM to 18-hole partner golf course"
+    }
+  },
+  "loyaltyProgram": {
+    "name": "Gator Rewards",
+    "enrollment": "Free, instant sign-up at booking, front desk, or via app/website",
+    "pointsEarning": "10 points per $1 on room rate + dining/spa spend",
+    "freeNightRedemption": "20,000 points = 1 free night (standard room, non-peak dates)",
+    "pointsExpiration": "24 months of account inactivity",
+    "redemptionOptions": ["Free nights", "Room upgrades", "Spa credit", "Dining credit"],
+    "statusMatch": "Available by emailing loyalty@gogator.example with proof of elite status",
+    "tiers": [
+      {
+        "tier": "Palm",
+        "qualification": "0–9 nights/year",
+        "benefits": ["Points earning (10 pts/$1)", "Member rates", "Welcome drink"]
+      },
+      {
+        "tier": "Coral",
+        "qualification": "10–19 nights/year",
+        "benefits": [
+          "All Palm benefits",
+          "Room upgrade (subject to availability)",
+          "Late check-out (2 PM)",
+          "10% dining discount"
+        ]
+      },
+      {
+        "tier": "Gators",
+        "qualification": "20–39 nights/year",
+        "benefits": [
+          "All Coral benefits",
+          "Guaranteed room upgrade",
+          "Guaranteed 2 PM late check-out",
+          "VIP Lounge access",
+          "15% dining discount",
+          "Room service delivery fee & service charge waived"
+        ]
+      },
+      {
+        "tier": "Platinum Gators",
+        "qualification": "40+ nights/year",
+        "benefits": [
+          "All Gators benefits",
+          "Suite upgrade priority",
+          "Guaranteed 4 PM late check-out",
+          "20% dining discount",
+          "Dedicated concierge line",
+          "Complimentary cabana rental on weekdays (current promotion)"
+        ]
+      }
+    ]
+  },
+  "policies": {
+    "checkInOut": {
+      "checkIn": "4:00 PM",
+      "checkOut": "11:00 AM",
+      "guaranteedEarlyOrLate": "$50 in advance (10 AM check-in or 2 PM check-out, subject to availability)",
+      "requirements": "Valid photo ID and credit card required at check-in; incidental hold of $150/night authorized"
+    },
+    "cancellation": {
+      "standardRooms": "Free cancellation up to 5 days before arrival; inside 5 days, one night's charge",
+      "suitesAndVillas": "Free cancellation up to 14 days before arrival; inside 14 days, 50% of stay charged",
+      "noShows": "Full stay charged"
+    },
+    "childrenAndExtraGuests": {
+      "childrenUnder3": "Stay and eat free",
+      "rollawayBeds": "$35/night, subject to fire-code room capacity",
+      "cribs": "Complimentary, request at booking or via front desk"
+    },
+    "pets": {
+      "allowed": true,
+      "roomCategory": "Garden View category only (limited inventory)",
+      "fee": "$75 nonrefundable pet fee per stay",
+      "limits": "2 pets max, 50 lb combined weight limit",
+      "serviceAnimals": "Exempt from fee and room restrictions"
+    },
+    "smoking": {
+      "policy": "100% smoke-free indoors, including balconies",
+      "designatedAreas": "Designated outdoor smoking areas near parking structure",
+      "violationCleaningFee": "$250"
+    },
+    "ageRequirements": {
+      "primaryGuest": "21+",
+      "guests18to20": "May book with parent/guardian consent on file",
+      "adultsOnlyPool": "Strictly 18+"
+    },
+    "payment": {
+      "acceptedCards": ["Visa", "Mastercard", "Amex", "Discover", "Debit with sufficient credit for holds"],
+      "currency": "USD only; on-site currency exchange available at front desk",
+      "resortFeeAndTaxes": "Non-waivable and apply regardless of rate plan"
+    },
+    "damageAndLostItems": {
+      "lostAndFound": "Held 90 days; shipping charged to guest if requested after departure",
+      "damage": "Charged to card on file within 5 business days with itemized receipt"
+    }
+  },
+  "inRoomRequests": {
+    "menuHours": "6:00 AM – 12:00 AM (limited late-night menu 12–6 AM)",
+    "deliveryTime": "~35 minutes standard, ~20 minutes for breakfast peak",
+    "deliveryFee": "$6 + 18% service charge (waived for Gators tier and above)",
+    "orderingChannels": "In-room tablet, Guest Experience app, or dial extension 55",
+    "fulfillmentTimes": [
+      {
+        "type": "Extra towels/pillows",
+        "time": "20–30 min",
+        "routedTo": "Housekeeping"
+      },
+      {
+        "type": "Housekeeping (mid-day tidy)",
+        "time": "30–45 min",
+        "notes": "Can be scheduled for specific time"
+      },
+      {
+        "type": "Maintenance (AC, plumbing, TV)",
+        "time": "15–30 min",
+        "routedTo": "Engineering (urgent issues prioritized)"
+      },
+      {
+        "type": "Crib/rollaway delivery",
+        "time": "30–45 min",
+        "notes": "Confirm room capacity first"
+      },
+      {
+        "type": "Late checkout request",
+        "time": "Immediate confirmation if available",
+        "notes": "Check tier — some guaranteed free"
+      },
+      {
+        "type": "Do Not Disturb / Make Up Room toggle",
+        "time": "Immediate",
+        "notes": "Can also be set via in-room panel"
+      },
+      {
+        "type": "Wake-up call",
+        "time": "Scheduled",
+        "notes": "Confirm date/time and room number"
+      }
+    ]
+  },
+  "conciergeWorkflows": {
+    "commonBookings": [
+      "Specialty dining reservations",
+      "Spa treatments",
+      "Excursions (snorkeling tours, golf tee times, city day trips, sunset cruises)",
+      "Watersports equipment / jet ski reservations",
+      "Cabana rentals",
+      "Private events (routed to Events team if >10 guests)",
+      "Babysitting service (independent contractor, $25/hr, 2-hr min, 24-hr advance notice)"
+    ],
+    "leadTimes": {
+      "dining": "Same-day possible, recommend booking by 4 PM for evening slots",
+      "spa": "48 hours recommended for weekends",
+      "excursions": "24 hours minimum, some (golf) require 48 hours in peak season",
+      "privateEvents": "Minimum 2 weeks, routed to human Events Coordinator"
+    },
+    "confirmationProtocol": "All bookings generate a confirmation number and sync to guest stay itinerary in the app"
+  },
+  "reservationModificationFlow": [
+    "1. Verify identity (confirmation number + last name, or loyalty number)",
+    "2. State current reservation details and confirm what's changing",
+    "3. Quote any rate difference or fee",
+    "4. Guest confirms",
+    "5. Process change and send updated confirmation email"
+  ],
+  "complaintCategories": [
+    { "category": "Minor service miss", "examples": "Late room service, small housekeeping miss" },
+    { "category": "Room issue", "examples": "AC not working, noise complaint, cleanliness" },
+    { "category": "Billing dispute", "examples": "Unexpected charge, resort fee question" },
+    { "category": "Safety/health concern", "examples": "Injury, foodborne illness concern, security issue" },
+    { "category": "Staff conduct complaint", "examples": "Rude interaction, service failure" },
+    { "category": "Compensation request", "examples": "Guest asks for a credit, refund, or free night" }
+  ],
+  "customerGroups": [
+    {
+      "group": "U.S. Domestic Travelers",
+      "needs": "Families, couples, business travelers, and leisure guests. Key interests: beachfront recreation, pools, dining, golf, spa services, family activities."
+    },
+    {
+      "group": "Canadian Travelers",
+      "needs": "Couples, families, seasonal vacationers. Seeking all-inclusive beach resort experience, recreational activities, dining, wellness services."
+    },
+    {
+      "group": "Chinese Travelers",
+      "needs": "Individual travelers, families, small groups. Value multilingual assistance, convenient transportation, detailed itinerary information, clear explanations of services and policies."
+    },
+    {
+      "group": "South Korean Travelers",
+      "needs": "Leisure travelers, families, couples, business visitors. Value clear communication, convenient activity planning, accommodations, dining, shopping, recreation, excursions."
+    },
+    {
+      "group": "Mexican Travelers",
+      "needs": "Families, couples, leisure travelers. Seeking beach vacation, family-friendly activities, dining, entertainment, convenient transportation and excursion options."
+    }
+  ],
+  "directory": [
+    { "department": "Front Desk", "extension": "0", "primaryFunctions": "Guest services" },
+    { "department": "Concierge", "extension": "20", "primaryFunctions": "Activities and excursions" },
+    { "department": "Housekeeping", "extension": "30", "primaryFunctions": "Room cleaning and supplies" },
+    { "department": "Engineering", "extension": "40", "primaryFunctions": "Maintenance" },
+    { "department": "Room Service", "extension": "55", "primaryFunctions": "In-room dining" },
+    { "department": "Spa", "extension": "60", "primaryFunctions": "Spa services" },
+    { "department": "Events", "extension": "70", "primaryFunctions": "Meetings and events" },
+    { "department": "Reservations", "extension": "80", "primaryFunctions": "Reservations" },
+    { "department": "Security", "extension": "90", "primaryFunctions": "Security" }
+  ],
+  "localAttractions": [
+    {
+      "name": "Downtown Gainesville",
+      "distance": "15 min",
+      "typicalVisit": "2–4 hrs",
+      "keyInformation": "Restaurants, shops, nightlife"
+    },
+    {
+      "name": "University of Florida",
+      "distance": "15 min",
+      "typicalVisit": "2–4 hrs",
+      "keyInformation": "Campus, sports, museums"
+    },
+    {
+      "name": "Florida Museum of Natural History",
+      "distance": "20 min",
+      "typicalVisit": "2–3 hrs",
+      "keyInformation": "Family-friendly museum"
+    },
+    {
+      "name": "Butterfly Rainforest",
+      "distance": "20 min",
+      "typicalVisit": "1–2 hrs",
+      "keyInformation": "Indoor tropical attraction"
+    },
+    {
+      "name": "Kanapaha Botanical Gardens",
+      "distance": "20 min",
+      "typicalVisit": "1–2 hrs",
+      "keyInformation": "Gardens and walking trails"
+    },
+    {
+      "name": "Devil's Millhopper Geological State Park",
+      "distance": "25 min",
+      "typicalVisit": "1–2 hrs",
+      "keyInformation": "Nature and hiking"
+    },
+    {
+      "name": "Paynes Prairie",
+      "distance": "25 min",
+      "typicalVisit": "1–3 hrs",
+      "keyInformation": "Wildlife viewing and trails"
+    },
+    {
+      "name": "Historic Downtown / Cultural District",
+      "distance": "15–20 min",
+      "typicalVisit": "2–4 hrs",
+      "keyInformation": "Dining and cultural activities"
+    }
+  ],
+  "operationalUpdates": [
+    "Due to temporary staffing limitations, airport shuttle reservations currently require 24-hour advance booking.",
+    "On Sunday, the spa will open at 10 AM due to scheduled maintenance.",
+    "The Family Pool will close at 6 PM today for a private event.",
+    "The Waterfront will close at 8 PM tonight for a private event.",
+    "Platinum Gators members receive complimentary cabana rental on weekdays during the current promotional period."
+  ]
+}

@@ -194,6 +194,77 @@ You were working on a prompt and then antigravity stopped responding. Please res
 
 ---
 
+### Session 7: Course Knowledge Base Ingestion & Authentic Ritz-Carlton Framework Cloning
+- **Date**: September 17, 2026
+- **Time**: 4:32:04 PM EDT (20:32:04 UTC)
+
+#### 7.1 Verbatim Student Prompts
+**Initial Prompt (Course Document Ingestion)**:
+```text
+My professor has provided the information that should be included in our website design and for the chatbot's responses. Can you please convert the attached document into a file version that works best for AI and for you to use for the website? Do not make any changes to the site yet, I want to run through some things with you first.
+```
+
+**Follow-up Prompt (Authentic Ritz-Carlton Clone Specification)**:
+```text
+I truly want a local copy version of the Ritz Carl ton site, not matching design style. We are making a full copy of the site, then will add in changes from the professors specifications. We can essentially scrap a majority of the work done. We will be redesigning the chatbot from the ground up later on, but for now I want to get the site working.
+```
+
+#### 7.2 Architectural Action, Knowledge Engineering & Framework Execution
+1. **Course Syllabus Knowledge Engineering**:
+   - Analyzed the professor's 13-page official specification for **Go Gator Resort & Spa** (a 4.5-star all-inclusive property with 306 accommodations located at 4200 Ocean Vista Drive, Gainesville, FL).
+   - Produced two foundational files:
+     - `knowledge/go_gator_resort_knowledge.md`: A structured Markdown knowledge base optimized for LLM system prompts, vector search (RAG), and policy auditing.
+     - `src/data/resortData.json` & `src/data/resortData.ts`: A strongly typed data layer encapsulating room tiers, seasonal pricing ($189–$1,199), 5 dining venues + 3 bars, all-inclusive rules, 3 pool environments, spa treatments, loyalty tiers (Gator Rewards), cancellation policies, in-room request routing, and active operational notices.
+2. **High-Resolution Media Extraction**:
+   - Extracted 5 embedded media assets from the course PDF and saved them to `public/images/`:
+     - `gator_logo.png`: Official resort crest and mascot emblem.
+     - `resort_exterior.png`: High-resolution dusk view of the resort grounds.
+     - `guest_room.jpeg`: Primary guest bedroom accommodation interior.
+     - `gator_buffet.jpeg`: Go Gator Buffet dining hall.
+     - `resort_map.jpeg`: Complete 1457x971 Property Map & Floor Plan.
+3. **Strategic Framework Pivot: Official Ritz-Carlton Site Clone**:
+   - Rather than merely adopting design accents, executed a complete replication of the real [The Ritz-Carlton official website](https://www.ritzcarlton.com/) to serve as the baseline framework.
+   - Fetched the complete HTML architecture, typography tokens, and Marriott CDN asset links directly from `ritzcarlton.com`.
+   - Developed a modular suite of authentic Ritz-Carlton components:
+     - `RitzCarltonHeader`: Multi-tier header featuring the iconic Lion & Crown crest, "Sign in or Join", language selector, and navigation across Hotels & Resorts, Reserve, Residences, Yachts, and The Experience.
+     - `RitzCarltonReservation`: The signature floating reservation search bar with live destination input, dates, expandable Rooms & Guests selector (with Adult/Child count limits), and Special Rate code options (Lowest Regular Rate, AAA/CAA, Senior, Military, Corp/Promo).
+     - `RitzCarltonHero`: Magazine-scale hero banner with authentic tagline: *"Journey into a world where wonders await around every corner. Welcome to the world according to The Ritz-Carlton."*
+     - `RitzCarltonFeatured`: "Where to Go Next" showcase highlighting Forbes Five-Star Dallas, Siari Reserve, Masai Mara Safari, Wuhan, Geneva, Zadún, and Hawaii using real Marriott CDN photography.
+     - `RitzCarltonEditorial`: "Beyond the Drive" Tokyo to Nikko road journey editorial feature.
+     - `RitzCarltonReserve`: "The Journey Of a Lifetime" luxury escape collection (Dorado Beach, Riviera Nayarit, Jiuzhaigou, Costa Rica).
+     - `RitzCarltonYachts`: Showcase of The Ritz-Carlton Yacht Collection and The Rental Collection residences.
+     - `RitzCarltonImmersions`: Brand immersions and "In Good Company" partnerships (MERIT Beauty, U.S. SailGP Team).
+     - `RitzCarltonWorld`: Interactive category selector spanning Hotels & Resorts, Reserve, Yachts, Safari, and Residences.
+     - `RitzCarltonFooter`: Authentic brand footer with Marriott Bonvoy affiliation, leadership center links, legal licensing marks, and social channels.
+4. **Verification & Quality Assurance**:
+   - Type-checked the entire application with `tsc --noEmit` (passed with 0 errors).
+   - Compiled full Next.js production build (`next build`), validating all 13 routes and server components.
+
+---
+
+### Session 8: Full Course Specification Ingestion & Rebranding to Go Gator Resort & Spa
+
+**User Directive & Plan Alignment**:
+> "All references to Ritz Carlton should be removed as we are migrating over for our website"
+> "Please go ahead and add in content from the professor's information. Only information he shared should be included in textual elements. Images he shared, as well as preexisting on the site should be used. The only location for this resort is this one, so there should only be a card for it."
+
+**Key Architectural Deliverables**:
+1. **Single Resort Showcase Architecture**:
+   - Replaced multi-property luxury carousel with the dedicated single-property **Go Gator Resort & Spa Showcase** (`GatorPropertyOverview`), displaying authentic property credentials: 4200 Ocean Vista Drive, Northwest Gainesville, FL, 306 rooms/villas, 800 ft beachfront, 4.5-star rating, check-in 4:00 PM, check-out 11:00 AM.
+2. **100% Professor Syllabus Data Parity**:
+   - **Accommodations (`GatorAccommodations`)**: All 7 room and villa tiers (Garden View, Resort View, Ocean View, Ocean Front, Junior Suite, Executive Suite, Two-Bedroom Villa) with exact square footages, room number assignments (101–280, 301–306), High/Low season pricing, and pet policy details ($75 non-refundable fee, 2 pets, 50 lbs max).
+   - **Culinary Collection (`GatorDining`)**: All 5 restaurants and 3 bars (Go Gator Buffet, The Waterfront, The Gator Grill, Tiki Bar, Lagoon Lounge, Swamp View) with hours, dress codes, specialty dinner inclusion policies, and dietary restrictions guidance (24-hr advance notice for kosher/halal).
+   - **Amenities & Wellness (`GatorAmenities`, `GatorSpa`)**: 3 outdoor pools (Family, Serenity Adults 18+, Lazy River), 800 ft private beach, cabana rentals ($75/day with Platinum promo), 24/7 fitness center ($60/hr personal training), full-service spa with 12 treatment rooms, and signature treatments.
+   - **Experiences & Loyalty (`GatorActivities`, `GatorLoyalty`, `GatorAttractions`)**: Kids Club (complimentary daytime, $25 evening), Teen Lounge, watersport rentals, 4 Gator Rewards loyalty tiers (Palm, Coral, Gators, Platinum Gators), and 8 Gainesville/UF area highlights.
+   - **Daily Resort Bulletins (`GatorBulletins`)**: Prominent guest advisory banner highlighting active operational notices (airport shuttle 24-hr notice, Sunday spa 10 AM opening, early pool/dining closures, Platinum cabana promotion).
+   - **Interactive Map Viewer (`GatorMapViewer`)**: Lightbox modal rendering the professor's high-resolution resort map with building and room layout guides.
+   - **Official Directory & Academic Disclaimer (`GatorFooter`)**: Full internal extension directory (Ext 0 to Ext 90), resort policies, and clear academic disclaimer for chatbot training.
+3. **Complete Rebrand Execution**:
+   - Purged all legacy Ritz-Carlton placeholder files and branding tokens, standardizing the brand identity strictly as **Go Gator Resort & Spa**.
+
+
+---
+
 ## Technical Architecture & System Blueprint
 
 ### 1. High-Level Architecture Diagram
@@ -365,5 +436,6 @@ model Correction {
 - [x] **Milestone 2**: Dual-Tier Authentication (NextAuth with Google/Discord OAuth & Admin Credentials).
 - [x] **Milestone 3**: Hotel Demonstration Landing Page & Floating Concierge Chat Widget.
 - [x] **Milestone 4**: Interactive Feedback Loop (Thumbs Up/Down) and Audited Database Logging.
-- [x] **Milestone 5**: Admin Dashboard (Search, Flagged Queue, Correction Editor, and Markdown/Text Export).
-- [ ] **Milestone 6**: Ingestion of Course Hotel Knowledge Base & Final LLM Integration.
+- [x] **Milestone 6**: Ingestion of Course Hotel Knowledge Base (`go_gator_resort_knowledge.md`, `resortData.json`, `resortData.ts`) & High-Res Asset Extraction (`public/images/`).
+- [x] **Milestone 7**: Authentic Ritz-Carlton Official Website Framework Cloning (`ritzcarlton.com` UI, Reservation Engine, Brand Portfolios & Footer).
+- [x] **Milestone 8**: Ground-Up Ingestion of Course Hotel Specifications & Complete Rebranding to Go Gator Resort & Spa.

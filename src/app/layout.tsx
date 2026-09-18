@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Grand Azure Resort & Spa | Luxury Sanctuary & 24/7 AI Concierge",
-  description: "Experience five-star coastal elegance, world-class gastronomy, and personalized AI concierge care at The Grand Azure Resort & Spa.",
+  title: "Go Gator Resort & Spa | 4.5-Star All-Inclusive Luxury Resort & Spa",
+  description: "Welcome to Go Gator Resort & Spa in Northwest Gainesville, Florida. 306 accommodations, 800 ft of private beachfront, 3 outdoor pools, 5 dining venues, full-service spa, and Gator Rewards.",
 };
 
 export default function RootLayout({
